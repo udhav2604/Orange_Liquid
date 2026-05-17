@@ -1,0 +1,1127 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#1A0E0A" />
+<title>Orange Liquid Glass — iPhone Wallpapers</title>
+<meta name="description" content="19 hand-crafted 4K liquid-glass iPhone wallpapers in amber, sunset orange, and molten red. Built for iOS depth-effect. $4.99 with code GET20 — 5 days only." />
+
+<!-- OG / Twitter -->
+<meta property="og:title" content="Orange Liquid Glass — 19 iPhone wallpapers, dipped in molten light" />
+<meta property="og:description" content="Hand-crafted 4K liquid-glass wallpapers. iOS depth-effect ready. $4.99 with GET20." />
+<meta property="og:image" content="wallpapers/04.jpeg" />
+<meta property="og:type" content="product" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<!-- Favicon: a tinted wallpaper -->
+<link rel="icon" type="image/jpeg" href="wallpapers/04.jpeg" />
+
+<!-- Preload hero imagery -->
+<link rel="preload" as="image" href="wallpapers/04.jpeg" />
+<link rel="preload" as="image" href="wallpapers/09.jpeg" />
+<link rel="preload" as="image" href="wallpapers/11.jpeg" />
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          ember:  '#C73E1D',
+          amber:  '#FF6B35',
+          honey:  '#FF8C42',
+          gold:   '#FFB347',
+          cream:  '#FFF4E6',
+          ink:    '#1A0E0A',
+        },
+        fontFamily: {
+          serif: ['"Instrument Serif"', 'ui-serif', 'Georgia', 'serif'],
+          sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        },
+      }
+    }
+  };
+</script>
+
+<style>
+  :root {
+    --ember: #C73E1D;
+    --amber: #FF6B35;
+    --honey: #FF8C42;
+    --gold:  #FFB347;
+    --cream: #FFF4E6;
+    --ink:   #1A0E0A;
+    --glass-bg:   rgba(255, 244, 230, 0.08);
+    --glass-edge: rgba(255, 179, 71, 0.30);
+    --glass-hi:   rgba(255, 255, 255, 0.35);
+  }
+
+  html { scroll-behavior: smooth; }
+  body {
+    background: #14080a;
+    color: var(--cream);
+    font-feature-settings: "ss01","cv11";
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  /* ---- Animated gradient mesh background ---- */
+  .mesh {
+    position: fixed; inset: 0; z-index: -2;
+    background:
+      radial-gradient(ellipse at 50% 0%, #2a0e08 0%, #14080a 60%);
+    overflow: hidden;
+  }
+  .mesh::before, .mesh::after,
+  .mesh .blob {
+    content: ""; position: absolute; border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.55;
+    will-change: transform;
+  }
+  .mesh::before {
+    width: 60vmax; height: 60vmax;
+    left: -15vmax; top: -10vmax;
+    background: radial-gradient(circle, #FF6B35 0%, rgba(255,107,53,0) 65%);
+    animation: drift1 28s ease-in-out infinite alternate;
+  }
+  .mesh::after {
+    width: 55vmax; height: 55vmax;
+    right: -15vmax; top: 20vmax;
+    background: radial-gradient(circle, #C73E1D 0%, rgba(199,62,29,0) 65%);
+    animation: drift2 34s ease-in-out infinite alternate;
+  }
+  .mesh .blob {
+    width: 45vmax; height: 45vmax;
+    left: 30vmax; top: 60vmax;
+    background: radial-gradient(circle, #FFB347 0%, rgba(255,179,71,0) 65%);
+    animation: drift3 40s ease-in-out infinite alternate;
+    opacity: 0.40;
+  }
+  @keyframes drift1 { from { transform: translate(0,0) scale(1);} to { transform: translate(15vmax, 10vmax) scale(1.15);} }
+  @keyframes drift2 { from { transform: translate(0,0) scale(1.1);} to { transform: translate(-12vmax, -8vmax) scale(0.95);} }
+  @keyframes drift3 { from { transform: translate(0,0) scale(1);} to { transform: translate(-20vmax, -20vmax) scale(1.2);} }
+
+  /* film grain overlay */
+  .grain {
+    position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    opacity: 0.06; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.6'/></svg>");
+  }
+
+  /* ---- Glass primitive ---- */
+  .glass {
+    background:
+      linear-gradient(180deg, rgba(255,244,230,0.10) 0%, rgba(255,244,230,0.04) 100%);
+    backdrop-filter: blur(22px) saturate(140%);
+    -webkit-backdrop-filter: blur(22px) saturate(140%);
+    border: 1px solid var(--glass-edge);
+    box-shadow:
+      inset 0 1px 0 var(--glass-hi),
+      inset 0 -20px 40px -20px rgba(255,107,53,0.15),
+      0 30px 60px -30px rgba(0,0,0,0.6);
+  }
+  .glass-soft {
+    background: rgba(255,244,230,0.05);
+    backdrop-filter: blur(14px) saturate(130%);
+    -webkit-backdrop-filter: blur(14px) saturate(130%);
+    border: 1px solid rgba(255,179,71,0.18);
+  }
+
+  /* serif display */
+  .serif { font-family: 'Instrument Serif', serif; font-weight: 400; letter-spacing: -0.01em; }
+  .serif-i { font-family: 'Instrument Serif', serif; font-style: italic; font-weight: 400; letter-spacing: -0.01em; }
+  .tabnum { font-variant-numeric: tabular-nums; }
+
+  /* CTA button — molten amber */
+  .btn-amber {
+    position: relative;
+    background: linear-gradient(180deg, #FF8C42 0%, #FF6B35 55%, #E14F1A 100%);
+    color: #1A0E0A;
+    border: 1px solid rgba(255,200,150,0.6);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.55),
+      inset 0 -8px 16px -8px rgba(154,40,10,0.55),
+      0 14px 30px -10px rgba(255,107,53,0.55),
+      0 2px 0 rgba(154,40,10,0.4);
+    transition: transform .25s ease-out, box-shadow .25s ease-out, filter .25s ease-out;
+  }
+  .btn-amber:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+    box-shadow:
+      inset 0 1px 0 rgba(255,255,255,0.6),
+      inset 0 -8px 16px -8px rgba(154,40,10,0.55),
+      0 22px 40px -10px rgba(255,107,53,0.7),
+      0 2px 0 rgba(154,40,10,0.4);
+  }
+  .btn-amber:focus-visible {
+    outline: 2px solid var(--gold);
+    outline-offset: 3px;
+  }
+  .btn-amber:active { transform: translateY(0); }
+
+  /* card hover */
+  .wp-card {
+    transition: transform .35s ease-out, box-shadow .35s ease-out, filter .35s ease-out;
+    will-change: transform;
+  }
+  .wp-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px -20px rgba(255,107,53,0.45),
+                0 0 0 1px rgba(255,179,71,0.35);
+  }
+  .wp-card:hover .wp-meta { opacity: 1; transform: translateY(0); }
+  .wp-meta {
+    opacity: 0; transform: translateY(8px);
+    transition: opacity .25s ease, transform .25s ease;
+  }
+
+  /* marquee */
+  .marquee { display: flex; gap: 2.5rem; width: max-content; animation: scroll 60s linear infinite; }
+  .marquee:hover { animation-play-state: paused; }
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* pulse dot */
+  .pulse {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #FF6B35; box-shadow: 0 0 0 0 rgba(255,107,53,0.7);
+    animation: pulse 1.8s infinite;
+  }
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(255,107,53,0.7); }
+    70%  { box-shadow: 0 0 0 10px rgba(255,107,53,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,107,53,0); }
+  }
+
+  /* parallax hero floats */
+  .hero-float {
+    transition: transform .8s cubic-bezier(.2,.7,.2,1);
+    will-change: transform;
+  }
+
+  /* before/after slider */
+  .ba-wrap { position: relative; overflow: hidden; border-radius: 28px; touch-action: none; }
+  .ba-after {
+    position: absolute; inset: 0;
+    clip-path: inset(0 0 0 var(--pos, 50%));
+  }
+  .ba-handle {
+    position: absolute; top: 0; bottom: 0; left: var(--pos, 50%);
+    width: 2px; background: rgba(255,244,230,0.85);
+    box-shadow: 0 0 16px rgba(255,255,255,0.5);
+    transform: translateX(-1px);
+  }
+  .ba-knob {
+    position: absolute; top: 50%; left: var(--pos, 50%);
+    width: 44px; height: 44px; border-radius: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(255,244,230,0.95);
+    color: #1A0E0A;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 600; font-size: 18px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+    cursor: ew-resize;
+  }
+
+  /* lightbox */
+  .lightbox {
+    position: fixed; inset: 0; z-index: 80;
+    background: rgba(10,5,3,0.85);
+    backdrop-filter: blur(20px);
+    display: none; align-items: center; justify-content: center;
+    padding: 1.5rem;
+  }
+  .lightbox.open { display: flex; }
+
+  /* FAQ */
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .chev { transform: rotate(45deg); }
+  .chev { transition: transform .25s ease; }
+
+  /* selection */
+  ::selection { background: rgba(255,107,53,0.4); color: #FFF4E6; }
+
+  /* respect reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .mesh::before, .mesh::after, .mesh .blob,
+    .marquee, .pulse, .hero-float { animation: none !important; }
+    html { scroll-behavior: auto; }
+  }
+
+  /* iridescent rim — for accents */
+  .rim {
+    background: linear-gradient(120deg, #FFB347 0%, #FF6B35 35%, #C73E1D 70%, #FFB347 100%);
+    -webkit-background-clip: text; background-clip: text;
+    color: transparent;
+  }
+
+  /* hero crossfade slides */
+  .hero-slide { transition: opacity 1.2s ease-in-out; }
+  .hero-thumb { transition: opacity .25s ease, transform .25s ease; }
+  .hero-thumb.is-active { opacity: 1 !important; transform: scale(1.04); }
+  .hero-thumb:hover { opacity: 0.9; }
+</style>
+</head>
+<body class="font-sans">
+
+<div class="mesh" aria-hidden="true"><div class="blob"></div></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- ============== STICKY COUNTDOWN BAR ============== -->
+<div id="bar" class="sticky top-0 z-50 w-full">
+  <div class="glass border-x-0 border-t-0 rounded-none">
+    <div class="mx-auto max-w-7xl px-3 sm:px-6 py-2.5 flex items-center gap-2 sm:gap-4 text-[12.5px] sm:text-sm">
+      <span class="pulse shrink-0" aria-hidden="true"></span>
+      <span class="hidden sm:inline font-medium text-cream/90 whitespace-nowrap">SALE ENDS IN</span>
+      <span class="sm:hidden font-medium text-cream/90">ENDS</span>
+      <span id="countdown" class="tabnum font-semibold text-cream tracking-tight whitespace-nowrap">— : — : — : —</span>
+      <span class="hidden md:inline text-cream/40">·</span>
+      <button data-copy="GET20" class="copy-chip hidden md:inline-flex items-center gap-1.5 text-cream/85 hover:text-cream group">
+        Code <span class="font-semibold text-gold tracking-wider">GET20</span>
+        <svg class="copy-icon w-3 h-3 opacity-60 group-hover:opacity-100" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+        <span class="copied-flag hidden text-emerald-300">✓</span>
+      </button>
+      <span class="flex-1"></span>
+      <a href="https://technouniverse.bio/shop/8cd193d9-0fee-4b4c-9e12-8837fef76d29" class="shrink-0 text-cream/90 hover:text-cream font-medium underline-offset-4 hover:underline">Get the pack →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ============== HERO ============== -->
+<section class="relative min-h-[100svh] flex items-center pt-8 sm:pt-14 pb-24 sm:pb-20 overflow-hidden">
+  <div class="mx-auto max-w-7xl w-full px-5 sm:px-8 grid lg:grid-cols-12 gap-10 lg:gap-10 items-center">
+
+    <!-- Copy -->
+    <div class="lg:col-span-6 order-2 lg:order-1 relative z-10 text-center lg:text-left">
+      <div class="inline-flex items-center gap-2 glass-soft rounded-full px-3 py-1.5 text-[11px] sm:text-xs tracking-[0.18em] uppercase text-gold/90">
+        <span class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+        New drop · May 2026
+      </div>
+
+      <h1 class="mt-5 sm:mt-6 serif text-[40px] leading-[1.02] sm:text-[64px] lg:text-[84px] tracking-tight text-cream">
+        Your phone,<br/>
+        dipped in <span class="serif-i rim">molten light.</span>
+      </h1>
+
+      <p class="mt-5 sm:mt-6 max-w-xl mx-auto lg:mx-0 text-cream/75 text-[15px] sm:text-lg leading-relaxed">
+        19 liquid-glass wallpapers. Crafted in 4K. Built for iOS depth-effect. Yours in one click.
+      </p>
+
+      <div class="mt-7 sm:mt-8 flex flex-wrap justify-center lg:justify-start items-center gap-3">
+        <a href="https://technouniverse.bio/shop/8cd193d9-0fee-4b4c-9e12-8837fef76d29"
+           class="btn-amber inline-flex items-center gap-2 sm:gap-3 rounded-full px-5 sm:px-7 py-3.5 sm:py-4 text-[14px] sm:text-base font-semibold">
+          Get the pack — $4.99
+          <span class="text-ink/60 line-through tabnum font-medium text-[12px] sm:text-sm">$9.99</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <button data-copy="GET20" class="copy-chip glass-soft inline-flex items-center gap-2 rounded-full px-4 py-3.5 text-[13px] sm:text-sm text-cream hover:bg-white/10 group">
+          <span class="tracking-wider font-semibold text-gold">GET20</span>
+          <span class="text-cream/55">— copy code</span>
+          <svg class="copy-icon w-4 h-4 opacity-70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+          <span class="copied-flag hidden text-emerald-300 text-xs">Copied!</span>
+        </button>
+      </div>
+
+      <p class="mt-5 text-[12.5px] sm:text-sm text-cream/55">
+        Instant download · One-time payment ·
+        <span class="text-cream/80">4,200+ happy iPhones</span>
+      </p>
+    </div>
+
+    <!-- Hero showcase: auto-rotating featured phone + thumbnail strip -->
+    <div class="lg:col-span-6 order-1 lg:order-2 relative">
+      <div class="relative mx-auto w-full max-w-[480px] sm:max-w-[560px]">
+        <!-- back glow -->
+        <div class="absolute -inset-8 sm:-inset-16 rounded-full blur-3xl bg-amber/30 -z-0" aria-hidden="true"></div>
+
+        <!-- crossfade stack -->
+        <div id="heroStack" class="relative aspect-[3/4] rounded-[28px] sm:rounded-[36px] overflow-hidden ring-1 ring-gold/40 shadow-[0_40px_80px_-20px_rgba(255,107,53,0.45)]">
+          <img class="hero-slide absolute inset-0 w-full h-full object-cover" src="wallpapers/04.jpeg" alt="Orange Liquid Glass wallpaper preview" />
+          <img class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0" src="wallpapers/09.jpeg" alt="" />
+          <img class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0" src="wallpapers/11.jpeg" alt="" />
+          <img class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0" src="wallpapers/14.jpeg" alt="" />
+          <img class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0" src="wallpapers/17.jpeg" alt="" />
+          <img class="hero-slide absolute inset-0 w-full h-full object-cover opacity-0" src="wallpapers/06.jpeg" alt="" />
+
+          <!-- bottom gradient + caption chip -->
+          <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/40 to-transparent pointer-events-none"></div>
+          <div class="absolute bottom-3 left-1/2 -translate-x-1/2 glass rounded-full px-3 py-1.5 text-[11px] text-cream/90 flex items-center gap-2">
+            <span id="heroDot" class="w-1.5 h-1.5 rounded-full bg-gold"></span>
+            <span id="heroCounter" class="tabnum">04 / 19</span>
+          </div>
+        </div>
+
+        <!-- thumbnail row -->
+        <div class="mt-4 grid grid-cols-6 gap-2">
+          <button data-slide="0" class="hero-thumb relative aspect-square rounded-lg overflow-hidden ring-1 ring-gold/30">
+            <img src="wallpapers/04.jpeg" alt="" class="w-full h-full object-cover"/>
+          </button>
+          <button data-slide="1" class="hero-thumb relative aspect-square rounded-lg overflow-hidden ring-1 ring-gold/20 opacity-60">
+            <img src="wallpapers/09.jpeg" alt="" class="w-full h-full object-cover"/>
+          </button>
+          <button data-slide="2" class="hero-thumb relative aspect-square rounded-lg overflow-hidden ring-1 ring-gold/20 opacity-60">
+            <img src="wallpapers/11.jpeg" alt="" class="w-full h-full object-cover"/>
+          </button>
+          <button data-slide="3" class="hero-thumb relative aspect-square rounded-lg overflow-hidden ring-1 ring-gold/20 opacity-60">
+            <img src="wallpapers/14.jpeg" alt="" class="w-full h-full object-cover"/>
+          </button>
+          <button data-slide="4" class="hero-thumb relative aspect-square rounded-lg overflow-hidden ring-1 ring-gold/20 opacity-60">
+            <img src="wallpapers/17.jpeg" alt="" class="w-full h-full object-cover"/>
+          </button>
+          <button data-slide="5" class="hero-thumb relative aspect-square rounded-lg overflow-hidden ring-1 ring-gold/20 opacity-60">
+            <img src="wallpapers/06.jpeg" alt="" class="w-full h-full object-cover"/>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- scroll cue -->
+  <a href="#proof" class="hidden sm:flex absolute left-1/2 -translate-x-1/2 bottom-6 text-cream/50 hover:text-cream/90 transition-colors flex-col items-center gap-1" aria-label="Scroll">
+    <span class="text-[10px] tracking-[0.3em] uppercase">Scroll</span>
+    <svg width="18" height="22" viewBox="0 0 18 22" fill="none" aria-hidden="true"><rect x="1" y="1" width="16" height="20" rx="8" stroke="currentColor" stroke-width="1.2"/><circle cx="9" cy="7" r="1.5" fill="currentColor"><animate attributeName="cy" values="6;13;6" dur="2s" repeatCount="indefinite"/></circle></svg>
+  </a>
+</section>
+
+<!-- ============== SOCIAL PROOF ============== -->
+<section id="proof" class="py-10 sm:py-14 border-y border-gold/10 overflow-hidden">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
+    <div class="flex items-center gap-3">
+      <div class="flex tabnum text-gold text-lg">★★★★★</div>
+      <div class="text-cream/80 text-sm"><span class="font-semibold text-cream tabnum">4.9</span> / 5 · <span class="tabnum">312</span> reviews</div>
+    </div>
+    <div class="text-xs uppercase tracking-[0.22em] text-cream/40">Real buyers · iPhone Wallpapers packs</div>
+  </div>
+
+  <div class="relative">
+    <div class="marquee">
+      <!-- group A -->
+      <div class="flex gap-4 sm:gap-6 px-5 sm:px-8 shrink-0">
+        <!-- quote card template -->
+        <!-- 1 -->
+        <figure class="glass rounded-2xl px-5 py-4 flex items-center gap-4 w-[320px] sm:w-[380px] shrink-0">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-honey to-ember shrink-0 flex items-center justify-center text-ink font-semibold text-sm">MR</div>
+          <figcaption class="text-sm">
+            <p class="text-cream/90 leading-snug">“Literally the only wallpaper pack I've kept past a week.”</p>
+            <p class="mt-1 text-cream/50 text-xs">Maya R. · iPhone 15 Pro</p>
+          </figcaption>
+        </figure>
+        <figure class="glass rounded-2xl px-5 py-4 flex items-center gap-4 w-[320px] sm:w-[380px] shrink-0">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold to-amber shrink-0 flex items-center justify-center text-ink font-semibold text-sm">DK</div>
+          <figcaption class="text-sm">
+            <p class="text-cream/90 leading-snug">“The depth effect with the clock looks unreal.”</p>
+            <p class="mt-1 text-cream/50 text-xs">Daniel K. · iPhone 16</p>
+          </figcaption>
+        </figure>
+        <figure class="glass rounded-2xl px-5 py-4 flex items-center gap-4 w-[320px] sm:w-[380px] shrink-0">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-ember to-amber shrink-0 flex items-center justify-center text-ink font-semibold text-sm">ST</div>
+          <figcaption class="text-sm">
+            <p class="text-cream/90 leading-snug">“Worth every cent. Already bought the Pink pack too.”</p>
+            <p class="mt-1 text-cream/50 text-xs">Sara T. · iPhone 14</p>
+          </figcaption>
+        </figure>
+        <figure class="glass rounded-2xl px-5 py-4 flex items-center gap-4 w-[320px] sm:w-[380px] shrink-0">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-honey to-gold shrink-0 flex items-center justify-center text-ink font-semibold text-sm">JL</div>
+          <figcaption class="text-sm">
+            <p class="text-cream/90 leading-snug">“My homescreen finally feels expensive. Chef's kiss.”</p>
+            <p class="mt-1 text-cream/50 text-xs">Jordan L. · iPhone 17 Pro</p>
+          </figcaption>
+        </figure>
+        <figure class="glass rounded-2xl px-5 py-4 flex items-center gap-4 w-[320px] sm:w-[380px] shrink-0">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-amber to-ember shrink-0 flex items-center justify-center text-ink font-semibold text-sm">AN</div>
+          <figcaption class="text-sm">
+            <p class="text-cream/90 leading-snug">“The red one. Just the red one. Stop everything.”</p>
+            <p class="mt-1 text-cream/50 text-xs">Aisha N. · iPhone 15</p>
+          </figcaption>
+        </figure>
+      </div>
+      <!-- duplicate for seamless loop -->
+      <div class="flex gap-4 sm:gap-6 px-5 sm:px-8 shrink-0" aria-hidden="true">
+        <figure class="glass rounded-2xl px-5 py-4 flex items-center gap-4 w-[320px] sm:w-[380px] shrink-0">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-honey to-ember shrink-0 flex items-center justify-center text-ink font-semibold text-sm">MR</div>
+          <figcaption class="text-sm">
+            <p class="text-cream/90 leading-snug">“Literally the only wallpaper pack I've kept past a week.”</p>
+            <p class="mt-1 text-cream/50 text-xs">Maya R. · iPhone 15 Pro</p>
+          </figcaption>
+        </figure>
+        <figure class="glass rounded-2xl px-5 py-4 flex items-center gap-4 w-[320px] sm:w-[380px] shrink-0">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-gold to-amber shrink-0 flex items-center justify-center text-ink font-semibold text-sm">DK</div>
+          <figcaption class="text-sm">
+            <p class="text-cream/90 leading-snug">“The depth effect with the clock looks unreal.”</p>
+            <p class="mt-1 text-cream/50 text-xs">Daniel K. · iPhone 16</p>
+          </figcaption>
+        </figure>
+        <figure class="glass rounded-2xl px-5 py-4 flex items-center gap-4 w-[320px] sm:w-[380px] shrink-0">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-ember to-amber shrink-0 flex items-center justify-center text-ink font-semibold text-sm">ST</div>
+          <figcaption class="text-sm">
+            <p class="text-cream/90 leading-snug">“Worth every cent. Already bought the Pink pack too.”</p>
+            <p class="mt-1 text-cream/50 text-xs">Sara T. · iPhone 14</p>
+          </figcaption>
+        </figure>
+        <figure class="glass rounded-2xl px-5 py-4 flex items-center gap-4 w-[320px] sm:w-[380px] shrink-0">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-honey to-gold shrink-0 flex items-center justify-center text-ink font-semibold text-sm">JL</div>
+          <figcaption class="text-sm">
+            <p class="text-cream/90 leading-snug">“My homescreen finally feels expensive. Chef's kiss.”</p>
+            <p class="mt-1 text-cream/50 text-xs">Jordan L. · iPhone 17 Pro</p>
+          </figcaption>
+        </figure>
+        <figure class="glass rounded-2xl px-5 py-4 flex items-center gap-4 w-[320px] sm:w-[380px] shrink-0">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-amber to-ember shrink-0 flex items-center justify-center text-ink font-semibold text-sm">AN</div>
+          <figcaption class="text-sm">
+            <p class="text-cream/90 leading-snug">“The red one. Just the red one. Stop everything.”</p>
+            <p class="mt-1 text-cream/50 text-xs">Aisha N. · iPhone 15</p>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== GALLERY ============== -->
+<section id="gallery" class="py-20 sm:py-28">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-10 sm:mb-14">
+      <div>
+        <div class="text-xs uppercase tracking-[0.22em] text-gold/80">The gallery</div>
+        <h2 class="mt-3 serif text-[40px] sm:text-[58px] leading-[1.02] tracking-tight">
+          All 19 wallpapers. <span class="serif-i text-gold">One pack.</span>
+        </h2>
+      </div>
+      <p class="max-w-xs text-cream/65 text-sm sm:text-base">Tap any wallpaper to preview full-size. Hover to read the index.</p>
+    </div>
+
+    <!-- Bento grid: 6 cols on lg, mix of spans -->
+    <div id="bento" class="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-6 gap-3 sm:gap-4 auto-rows-[140px] sm:auto-rows-[180px] lg:auto-rows-[200px]">
+      <!-- Each card: data-i for lightbox; span classes for bento rhythm -->
+      <!-- Row 1 -->
+      <button class="wp-card group relative rounded-2xl overflow-hidden col-span-2 row-span-2 ring-1 ring-gold/20" data-i="4">
+        <img src="wallpapers/04.jpeg" alt="Orange Liquid Glass wallpaper 04" loading="lazy" class="w-full h-full object-cover"/>
+        <span class="wp-meta absolute bottom-3 left-3 glass-soft rounded-full px-3 py-1 text-[11px] text-cream/90 tabnum">04 / 19</span>
+      </button>
+      <button class="wp-card group relative rounded-2xl overflow-hidden col-span-1 row-span-1 ring-1 ring-gold/20" data-i="9">
+        <img src="wallpapers/09.jpeg" alt="Wallpaper 09" loading="lazy" class="w-full h-full object-cover"/>
+        <span class="wp-meta absolute bottom-2 left-2 glass-soft rounded-full px-2.5 py-0.5 text-[10px] tabnum">09</span>
+      </button>
+      <button class="wp-card group relative rounded-2xl overflow-hidden col-span-1 row-span-1 ring-1 ring-gold/20" data-i="11">
+        <img src="wallpapers/11.jpeg" alt="Wallpaper 11" loading="lazy" class="w-full h-full object-cover"/>
+        <span class="wp-meta absolute bottom-2 left-2 glass-soft rounded-full px-2.5 py-0.5 text-[10px] tabnum">11</span>
+      </button>
+      <button class="wp-card group relative rounded-2xl overflow-hidden col-span-2 row-span-1 ring-1 ring-gold/20" data-i="17">
+        <img src="wallpapers/17.jpeg" alt="Wallpaper 17" loading="lazy" class="w-full h-full object-cover"/>
+        <span class="wp-meta absolute bottom-2 left-2 glass-soft rounded-full px-2.5 py-0.5 text-[10px] tabnum">17</span>
+      </button>
+
+      <button class="wp-card group relative rounded-2xl overflow-hidden col-span-1 row-span-1 ring-1 ring-gold/20" data-i="2">
+        <img src="wallpapers/02.jpeg" alt="Wallpaper 02" loading="lazy" class="w-full h-full object-cover"/>
+        <span class="wp-meta absolute bottom-2 left-2 glass-soft rounded-full px-2.5 py-0.5 text-[10px] tabnum">02</span>
+      </button>
+      <button class="wp-card group relative rounded-2xl overflow-hidden col-span-1 row-span-1 ring-1 ring-gold/20" data-i="18">
+        <img src="wallpapers/18.jpeg" alt="Wallpaper 18" loading="lazy" class="w-full h-full object-cover"/>
+        <span class="wp-meta absolute bottom-2 left-2 glass-soft rounded-full px-2.5 py-0.5 text-[10px] tabnum">18</span>
+      </button>
+      <button class="wp-card group relative rounded-2xl overflow-hidden col-span-2 row-span-2 ring-1 ring-gold/20" data-i="14">
+        <img src="wallpapers/14.jpeg" alt="Wallpaper 14" loading="lazy" class="w-full h-full object-cover"/>
+        <span class="wp-meta absolute bottom-3 left-3 glass-soft rounded-full px-3 py-1 text-[11px] tabnum">14 / 19</span>
+      </button>
+
+      <button class="wp-card group relative rounded-2xl overflow-hidden col-span-1 row-span-1 ring-1 ring-gold/20" data-i="6">
+        <img src="wallpapers/06.jpeg" alt="Wallpaper 06" loading="lazy" class="w-full h-full object-cover"/>
+        <span class="wp-meta absolute bottom-2 left-2 glass-soft rounded-full px-2.5 py-0.5 text-[10px] tabnum">06</span>
+      </button>
+      <button class="wp-card group relative rounded-2xl overflow-hidden col-span-1 row-span-1 ring-1 ring-gold/20" data-i="13">
+        <img src="wallpapers/13.jpeg" alt="Wallpaper 13" loading="lazy" class="w-full h-full object-cover"/>
+        <span class="wp-meta absolute bottom-2 left-2 glass-soft rounded-full px-2.5 py-0.5 text-[10px] tabnum">13</span>
+      </button>
+
+      <button class="wp-card group relative rounded-2xl overflow-hidden col-span-2 row-span-1 ring-1 ring-gold/20" data-i="19">
+        <img src="wallpapers/19.jpeg" alt="Wallpaper 19" loading="lazy" class="w-full h-full object-cover"/>
+        <span class="wp-meta absolute bottom-2 left-2 glass-soft rounded-full px-2.5 py-0.5 text-[10px] tabnum">19</span>
+      </button>
+      <button class="wp-card group relative rounded-2xl overflow-hidden col-span-1 row-span-1 ring-1 ring-gold/20" data-i="1">
+        <img src="wallpapers/01.jpeg" alt="Wallpaper 01" loading="lazy" class="w-full h-full object-cover"/>
+        <span class="wp-meta absolute bottom-2 left-2 glass-soft rounded-full px-2.5 py-0.5 text-[10px] tabnum">01</span>
+      </button>
+      <button class="wp-card group relative rounded-2xl overflow-hidden col-span-1 row-span-1 ring-1 ring-gold/20" data-i="3">
+        <img src="wallpapers/03.jpeg" alt="Wallpaper 03" loading="lazy" class="w-full h-full object-cover"/>
+        <span class="wp-meta absolute bottom-2 left-2 glass-soft rounded-full px-2.5 py-0.5 text-[10px] tabnum">03</span>
+      </button>
+      <button class="wp-card group relative rounded-2xl overflow-hidden col-span-2 row-span-2 ring-1 ring-gold/20" data-i="15">
+        <img src="wallpapers/15.jpeg" alt="Wallpaper 15" loading="lazy" class="w-full h-full object-cover"/>
+        <span class="wp-meta absolute bottom-3 left-3 glass-soft rounded-full px-3 py-1 text-[11px] tabnum">15 / 19</span>
+      </button>
+
+      <button class="wp-card group relative rounded-2xl overflow-hidden col-span-1 row-span-1 ring-1 ring-gold/20" data-i="5">
+        <img src="wallpapers/05.jpeg" alt="Wallpaper 05" loading="lazy" class="w-full h-full object-cover"/>
+        <span class="wp-meta absolute bottom-2 left-2 glass-soft rounded-full px-2.5 py-0.5 text-[10px] tabnum">05</span>
+      </button>
+      <button class="wp-card group relative rounded-2xl overflow-hidden col-span-1 row-span-1 ring-1 ring-gold/20" data-i="7">
+        <img src="wallpapers/07.jpeg" alt="Wallpaper 07" loading="lazy" class="w-full h-full object-cover"/>
+        <span class="wp-meta absolute bottom-2 left-2 glass-soft rounded-full px-2.5 py-0.5 text-[10px] tabnum">07</span>
+      </button>
+      <button class="wp-card group relative rounded-2xl overflow-hidden col-span-1 row-span-1 ring-1 ring-gold/20" data-i="8">
+        <img src="wallpapers/08.jpeg" alt="Wallpaper 08" loading="lazy" class="w-full h-full object-cover"/>
+        <span class="wp-meta absolute bottom-2 left-2 glass-soft rounded-full px-2.5 py-0.5 text-[10px] tabnum">08</span>
+      </button>
+      <button class="wp-card group relative rounded-2xl overflow-hidden col-span-1 row-span-1 ring-1 ring-gold/20" data-i="10">
+        <img src="wallpapers/10.jpeg" alt="Wallpaper 10" loading="lazy" class="w-full h-full object-cover"/>
+        <span class="wp-meta absolute bottom-2 left-2 glass-soft rounded-full px-2.5 py-0.5 text-[10px] tabnum">10</span>
+      </button>
+      <button class="wp-card group relative rounded-2xl overflow-hidden col-span-1 row-span-1 ring-1 ring-gold/20" data-i="12">
+        <img src="wallpapers/12.jpeg" alt="Wallpaper 12" loading="lazy" class="w-full h-full object-cover"/>
+        <span class="wp-meta absolute bottom-2 left-2 glass-soft rounded-full px-2.5 py-0.5 text-[10px] tabnum">12</span>
+      </button>
+      <button class="wp-card group relative rounded-2xl overflow-hidden col-span-1 row-span-1 ring-1 ring-gold/20" data-i="16">
+        <img src="wallpapers/16.jpeg" alt="Wallpaper 16" loading="lazy" class="w-full h-full object-cover"/>
+        <span class="wp-meta absolute bottom-2 left-2 glass-soft rounded-full px-2.5 py-0.5 text-[10px] tabnum">16</span>
+      </button>
+    </div>
+
+    <p class="mt-8 text-center text-sm text-cream/55">
+      Each wallpaper is optimized for iPhone 12 through iPhone 17 Pro Max.
+    </p>
+  </div>
+</section>
+
+<!-- ============== WHAT YOU GET ============== -->
+<section class="py-20 sm:py-28">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="max-w-3xl">
+      <div class="text-xs uppercase tracking-[0.22em] text-gold/80">What you get</div>
+      <h2 class="mt-3 serif text-[40px] sm:text-[58px] leading-[1.02] tracking-tight">
+        Less than a coffee. <span class="serif-i text-gold">Lasts forever.</span>
+      </h2>
+    </div>
+
+    <!-- Editorial bento -->
+    <div class="mt-10 sm:mt-14 grid grid-cols-2 lg:grid-cols-6 gap-3 sm:gap-4">
+
+      <!-- BIG feature: full wallpaper visual with overlay copy -->
+      <div class="col-span-2 lg:col-span-4 lg:row-span-2 relative rounded-3xl overflow-hidden ring-1 ring-gold/30 group min-h-[420px] sm:min-h-[520px]">
+        <img src="wallpapers/04.jpeg" alt="Depth-effect demo on a liquid glass wallpaper" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/30 to-transparent"></div>
+        <div class="relative h-full flex flex-col justify-between p-6 sm:p-8">
+          <div class="self-start glass-soft rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.22em] text-gold">Native to iOS</div>
+          <div>
+            <div class="text-[11px] uppercase tracking-[0.22em] text-gold/90 mb-2">Feature 01</div>
+            <h3 class="serif text-3xl sm:text-5xl leading-[1.05] text-cream max-w-md">
+              The clock weaves<br/><span class="serif-i text-gold">through molten glass.</span>
+            </h3>
+            <p class="mt-3 text-cream/75 text-sm sm:text-base max-w-md leading-relaxed">
+              Every wallpaper is tuned for iOS subject-masking. The time slips behind the highlights, in front of the shadows — exactly like Apple intended.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 19 number card -->
+      <div class="col-span-1 lg:col-span-2 glass rounded-3xl p-6 sm:p-7 relative overflow-hidden flex flex-col justify-between min-h-[200px]">
+        <div class="absolute -top-12 -right-12 w-40 h-40 rounded-full bg-amber/30 blur-3xl"></div>
+        <div class="relative">
+          <div class="text-[10px] uppercase tracking-[0.22em] text-gold/80">Wallpapers</div>
+          <div class="mt-1 serif text-7xl sm:text-8xl text-cream tabnum leading-none tracking-tight">19</div>
+        </div>
+        <p class="relative text-[13px] sm:text-sm text-cream/65 leading-relaxed">
+          Unique designs. Each one hand-crafted in 3D. <span class="text-cream/90">No AI shortcuts.</span>
+        </p>
+      </div>
+
+      <!-- 4K card -->
+      <div class="col-span-1 lg:col-span-2 glass rounded-3xl p-6 sm:p-7 relative overflow-hidden flex flex-col justify-between min-h-[200px]">
+        <div class="absolute -top-12 -right-12 w-40 h-40 rounded-full bg-honey/30 blur-3xl"></div>
+        <div class="relative">
+          <div class="text-[10px] uppercase tracking-[0.22em] text-gold/80">Resolution</div>
+          <div class="mt-1 serif text-7xl sm:text-8xl text-cream leading-none tracking-tight">4<span class="serif-i text-gold">K</span></div>
+        </div>
+        <p class="relative text-[13px] sm:text-sm text-cream/65 leading-relaxed">
+          Crisp on every iPhone, retina to ProMotion. <span class="text-cream/90">No banding.</span>
+        </p>
+      </div>
+
+      <!-- Hand-crafted strip -->
+      <div class="col-span-2 lg:col-span-3 glass rounded-3xl p-6 sm:p-7 relative overflow-hidden flex items-center gap-5">
+        <div class="shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-honey to-ember flex items-center justify-center text-ink">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3 6 6 1-4.5 4.5L18 20l-6-3-6 3 1.5-6.5L3 9l6-1z"/></svg>
+        </div>
+        <div>
+          <div class="text-[10px] uppercase tracking-[0.22em] text-gold/80">Crafted in 3D</div>
+          <h3 class="mt-0.5 text-base sm:text-lg font-semibold text-cream">Real light, real glass.</h3>
+          <p class="mt-1 text-[13px] sm:text-sm text-cream/65 leading-relaxed">Ray-traced. Not Midjourney-stamped.</p>
+        </div>
+      </div>
+
+      <!-- Lifetime strip -->
+      <div class="col-span-2 lg:col-span-3 glass rounded-3xl p-6 sm:p-7 relative overflow-hidden flex items-center gap-5">
+        <div class="shrink-0 w-14 h-14 rounded-2xl bg-gradient-to-br from-gold to-amber flex items-center justify-center text-ink serif-i text-4xl pb-1">∞</div>
+        <div>
+          <div class="text-[10px] uppercase tracking-[0.22em] text-gold/80">Lifetime access</div>
+          <h3 class="mt-0.5 text-base sm:text-lg font-semibold text-cream">Buy once. Download forever.</h3>
+          <p class="mt-1 text-[13px] sm:text-sm text-cream/65 leading-relaxed">Free updates if I add more to this pack.</p>
+        </div>
+      </div>
+
+      <!-- Compatibility strip - small wallpaper thumbs as visual interest -->
+      <div class="col-span-2 lg:col-span-6 glass rounded-3xl p-5 sm:p-7 flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-7">
+        <div class="flex-1">
+          <div class="text-[10px] uppercase tracking-[0.22em] text-gold/80">Compatible</div>
+          <h3 class="mt-1 text-base sm:text-lg font-semibold text-cream">iPhone 12 → 17 Pro Max</h3>
+          <p class="mt-1 text-[13px] sm:text-sm text-cream/65 leading-relaxed">Every aspect ratio, every notch and Dynamic Island, accounted for.</p>
+        </div>
+        <div class="flex gap-1.5 sm:gap-2 overflow-hidden">
+          <div class="w-10 sm:w-12 aspect-[9/19.5] rounded-md sm:rounded-lg overflow-hidden ring-1 ring-gold/20"><img src="wallpapers/04.jpeg" alt="" class="w-full h-full object-cover"/></div>
+          <div class="w-10 sm:w-12 aspect-[9/19.5] rounded-md sm:rounded-lg overflow-hidden ring-1 ring-gold/20"><img src="wallpapers/09.jpeg" alt="" class="w-full h-full object-cover"/></div>
+          <div class="w-10 sm:w-12 aspect-[9/19.5] rounded-md sm:rounded-lg overflow-hidden ring-1 ring-gold/20"><img src="wallpapers/14.jpeg" alt="" class="w-full h-full object-cover"/></div>
+          <div class="w-10 sm:w-12 aspect-[9/19.5] rounded-md sm:rounded-lg overflow-hidden ring-1 ring-gold/20"><img src="wallpapers/17.jpeg" alt="" class="w-full h-full object-cover"/></div>
+          <div class="w-10 sm:w-12 aspect-[9/19.5] rounded-md sm:rounded-lg overflow-hidden ring-1 ring-gold/20"><img src="wallpapers/19.jpeg" alt="" class="w-full h-full object-cover"/></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============== BEFORE / AFTER ============== -->
+<section class="py-20 sm:py-28">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="max-w-3xl">
+      <div class="text-xs uppercase tracking-[0.22em] text-gold/80">Before · After</div>
+      <h2 class="mt-3 serif text-[40px] sm:text-[58px] leading-[1.02] tracking-tight">
+        Drag to feel the <span class="serif-i text-gold">upgrade.</span>
+      </h2>
+      <p class="mt-4 text-cream/65 text-sm sm:text-base max-w-xl">Same iPhone. Same hand position. The wallpaper does all the work.</p>
+    </div>
+
+    <div class="mt-10 max-w-md sm:max-w-lg mx-auto">
+      <div id="ba" class="ba-wrap aspect-[653/914] bg-cream/5 select-none">
+        <!-- Before: stock iPhone mockup with default wallpaper -->
+        <div class="absolute inset-0">
+          <img src="wallpapers/before-stock.jpg" alt="iPhone with stock iOS wallpaper" class="w-full h-full object-cover" loading="lazy"/>
+          <div class="absolute bottom-6 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-ink/70 text-cream/85 text-[10px] uppercase tracking-[0.25em] backdrop-blur font-medium">Stock</div>
+        </div>
+
+        <!-- After: liquid glass wallpaper mockup -->
+        <div class="ba-after">
+          <div class="absolute inset-0">
+            <img src="wallpapers/09.jpeg" alt="iPhone with Orange Liquid Glass wallpaper" class="w-full h-full object-cover" loading="lazy"/>
+          </div>
+          <div class="absolute bottom-6 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-amber text-ink text-[10px] uppercase tracking-[0.25em] font-semibold">iPhone Wallpapers</div>
+        </div>
+
+        <div class="ba-handle" aria-hidden="true"></div>
+        <div class="ba-knob" role="slider" tabindex="0" aria-label="Before / after slider" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">⇆</div>
+      </div>
+      <p class="mt-3 text-center text-xs text-cream/45">Drag the handle ← →</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== PRICING ============== -->
+<section id="pricing" class="py-20 sm:py-28 relative">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8">
+    <div class="max-w-2xl mx-auto text-center">
+      <div class="text-xs uppercase tracking-[0.22em] text-gold/80">Pricing</div>
+      <h2 class="mt-3 serif text-[40px] sm:text-[58px] leading-[1.02] tracking-tight">
+        One pack. <span class="serif-i text-gold">One price.</span>
+      </h2>
+    </div>
+
+    <div class="mt-12 max-w-xl mx-auto relative">
+      <!-- glow -->
+      <div class="absolute -inset-8 bg-amber/20 blur-3xl rounded-full -z-10" aria-hidden="true"></div>
+
+      <div class="glass rounded-[32px] p-7 sm:p-10 relative overflow-hidden">
+        <!-- top sheen -->
+        <div class="absolute top-0 left-1/4 right-1/4 h-px bg-gradient-to-r from-transparent via-cream/40 to-transparent"></div>
+
+        <div class="flex items-start justify-between gap-4">
+          <div>
+            <div class="text-xs uppercase tracking-[0.22em] text-gold">Orange Liquid Glass Pack</div>
+            <div class="mt-1 text-cream/60 text-sm">19 wallpapers · 4K · iPhone</div>
+          </div>
+          <div class="glass-soft rounded-full px-3 py-1 text-[10px] uppercase tracking-[0.18em] text-gold flex items-center gap-1.5">
+            <span class="pulse" style="width:6px;height:6px"></span> 5 days only
+          </div>
+        </div>
+
+        <div class="mt-8 flex items-baseline gap-3 sm:gap-4 flex-wrap">
+          <span class="serif text-6xl sm:text-8xl text-cream tabnum tracking-tight leading-none">$4<span class="text-4xl sm:text-6xl">.99</span></span>
+          <span class="serif text-2xl sm:text-3xl text-cream/40 line-through tabnum">$9.99</span>
+          <span class="px-2 py-0.5 rounded-full bg-amber/20 border border-amber/40 text-amber text-[11px] sm:text-xs font-semibold uppercase tracking-wider">50% off</span>
+        </div>
+        <div class="mt-4 flex flex-wrap items-center gap-2">
+          <span class="text-sm text-cream/65">Code</span>
+          <button data-copy="GET20" class="copy-chip glass-soft rounded-full px-3 py-1.5 text-sm inline-flex items-center gap-2 hover:bg-white/10">
+            <span class="font-semibold text-gold tracking-wider">GET20</span>
+            <svg class="copy-icon w-3.5 h-3.5 text-cream/70" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>
+            <span class="copied-flag hidden text-emerald-300 text-xs">Copied!</span>
+          </button>
+          <span class="inline-flex items-center gap-1 text-emerald-300/90 text-sm">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg> Auto-applied at checkout
+          </span>
+        </div>
+
+        <ul class="mt-8 space-y-3 text-[15px]">
+          <li class="flex items-center gap-3"><span class="text-gold">✓</span><span class="text-cream/90">19 wallpapers, 4K resolution</span></li>
+          <li class="flex items-center gap-3"><span class="text-gold">✓</span><span class="text-cream/90">iOS depth-effect ready</span></li>
+          <li class="flex items-center gap-3"><span class="text-gold">✓</span><span class="text-cream/90">Instant download after purchase</span></li>
+          <li class="flex items-center gap-3"><span class="text-gold">✓</span><span class="text-cream/90">Lifetime updates — free additions</span></li>
+          <li class="flex items-center gap-3"><span class="text-gold">✓</span><span class="text-cream/90">7-day no-questions refund</span></li>
+        </ul>
+
+        <a href="https://technouniverse.bio/shop/8cd193d9-0fee-4b4c-9e12-8837fef76d29"
+           class="btn-amber mt-9 w-full inline-flex items-center justify-center gap-3 rounded-2xl px-6 py-5 text-base sm:text-lg font-semibold">
+          Buy now — $4.99
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+
+        <div class="mt-4 flex flex-wrap items-center justify-between gap-3 text-xs text-cream/55">
+          <span>Secure checkout · Card · Apple&nbsp;Pay</span>
+          <span class="flex items-center gap-1.5">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            SSL encrypted
+          </span>
+        </div>
+      </div>
+
+      <p class="mt-5 text-center text-sm text-cream/60">
+        <span class="font-semibold text-cream tabnum">312</span> people bought this in the last 7 days
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FAQ ============== -->
+<section class="py-20 sm:py-28">
+  <div class="mx-auto max-w-3xl px-5 sm:px-8">
+    <div class="text-xs uppercase tracking-[0.22em] text-gold/80">Questions</div>
+    <h2 class="mt-3 serif text-[40px] sm:text-[58px] leading-[1.02] tracking-tight">
+      Good ones, <span class="serif-i text-gold">answered.</span>
+    </h2>
+
+    <div class="mt-10 divide-y divide-gold/15 border-y border-gold/15">
+      <details class="group py-5">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="text-cream text-base sm:text-lg font-medium">Will these work on my iPhone?</span>
+          <span class="chev text-gold text-2xl leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-cream/70 text-sm sm:text-base leading-relaxed">Yes — every wallpaper is sized for iPhone 12 through iPhone 17 Pro Max, including Plus and mini variants. Resolution is 4K so it scales beautifully to any model.</p>
+      </details>
+
+      <details class="group py-5">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="text-cream text-base sm:text-lg font-medium">How do I install them?</span>
+          <span class="chev text-gold text-2xl leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-cream/70 text-sm sm:text-base leading-relaxed">A one-tap install guide is included in the download. Save to Photos → set as wallpaper. Takes 30 seconds.</p>
+      </details>
+
+      <details class="group py-5">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="text-cream text-base sm:text-lg font-medium">Do they work with iOS depth-effect and subject lift?</span>
+          <span class="chev text-gold text-2xl leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-cream/70 text-sm sm:text-base leading-relaxed">Yes — every single one. The glass shapes are tuned so iOS masks the clock cleanly without losing the refractive highlights.</p>
+      </details>
+
+      <details class="group py-5">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="text-cream text-base sm:text-lg font-medium">Is this a subscription?</span>
+          <span class="chev text-gold text-2xl leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-cream/70 text-sm sm:text-base leading-relaxed">No. One-time payment. Yours forever. No recurring charges, no account required.</p>
+      </details>
+
+      <details class="group py-5">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="text-cream text-base sm:text-lg font-medium">Can I get a refund?</span>
+          <span class="chev text-gold text-2xl leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-cream/70 text-sm sm:text-base leading-relaxed">Yes — 7-day no-questions refund. DM us on Threads or email and you'll have it back the same day.</p>
+      </details>
+
+      <details class="group py-5">
+        <summary class="flex items-center justify-between gap-4">
+          <span class="text-cream text-base sm:text-lg font-medium">What if you add more wallpapers later?</span>
+          <span class="chev text-gold text-2xl leading-none">+</span>
+        </summary>
+        <p class="mt-3 text-cream/70 text-sm sm:text-base leading-relaxed">You get them free. Anyone who bought the Orange Liquid Glass pack gets every future addition to it at no extra cost — for life.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============== ABOUT ============== -->
+<section class="py-20 sm:py-28">
+  <div class="mx-auto max-w-4xl px-5 sm:px-8">
+    <div class="glass rounded-[32px] p-8 sm:p-12 grid sm:grid-cols-[auto_1fr] gap-8 items-center">
+      <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full overflow-hidden ring-2 ring-gold/40 shadow-lg shrink-0 bg-gradient-to-br from-honey to-ember flex items-center justify-center">
+        <span class="serif text-5xl sm:text-6xl text-cream serif-i">w</span>
+      </div>
+      <div>
+        <div class="text-xs uppercase tracking-[0.22em] text-gold/80">About</div>
+        <h3 class="mt-2 serif text-3xl sm:text-4xl tracking-tight">Made by <span class="serif-i text-gold">iPhone Wallpapers</span>.</h3>
+        <p class="mt-4 text-cream/75 leading-relaxed text-[15px] sm:text-base">
+          We're the largest premium wallpapers brand on Threads — a small studio designing wallpapers since 2022. Every wallpaper is hand-crafted in 3D, no AI shortcuts, no stock packs. Questions? <a href="https://www.threads.net/@iphonewallpapers" class="text-gold underline-offset-4 hover:underline">DM us on Threads</a>.
+        </p>
+        <div class="mt-5 flex items-center gap-3 text-xs uppercase tracking-[0.22em] text-cream/50">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" class="text-gold"><path d="M17.2 12.05c-.05-2.46-1.13-3.78-2.6-3.78-1.06 0-1.93.6-2.36 1.43h-.04c-.18-.6-.7-1.43-2.04-1.43-.96 0-1.7.5-2.13 1.18h-.05V8.4H6.43v7.2H8.4v-3.98c0-1.13.55-1.83 1.4-1.83.83 0 1.27.55 1.27 1.6v4.2h1.96v-3.98c0-1.13.55-1.83 1.4-1.83.83 0 1.27.55 1.27 1.6v4.2h1.96v-4.05c0-.04 0-.07-.01-.1zM12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/></svg>
+          <span>Largest premium wallpapers brand on Threads</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FINAL CTA ============== -->
+<section class="py-24 sm:py-32 relative">
+  <div class="absolute inset-x-0 top-1/2 -translate-y-1/2 h-[60%] bg-gradient-to-r from-amber/0 via-amber/25 to-amber/0 blur-3xl -z-10" aria-hidden="true"></div>
+  <div class="mx-auto max-w-4xl px-5 sm:px-8 text-center">
+    <h2 class="serif text-[44px] sm:text-[78px] leading-[1.0] tracking-tight">
+      5 days. 19 wallpapers.<br/>
+      <span class="serif-i rim">One price.</span>
+    </h2>
+    <p class="mt-6 max-w-xl mx-auto text-cream/70">
+      After May 20, this pack goes back to $4.99 — and the <span class="text-gold font-semibold">GET20</span> code expires for good.
+    </p>
+
+    <div class="mt-10 flex justify-center">
+      <a href="https://technouniverse.bio/shop/8cd193d9-0fee-4b4c-9e12-8837fef76d29"
+         class="btn-amber inline-flex items-center gap-3 rounded-full px-8 py-5 text-base sm:text-lg font-semibold">
+        Get yours — $4.99
+        <span class="text-ink/60 line-through tabnum text-sm">$9.99</span>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+
+    <div class="mt-8 inline-flex items-center gap-3 glass rounded-full px-5 py-3 tabnum text-sm">
+      <span class="pulse"></span>
+      <span class="text-cream/70">Sale ends in</span>
+      <span id="countdown2" class="font-semibold text-cream">— : — : — : —</span>
+    </div>
+  </div>
+</section>
+
+<!-- ============== FOOTER ============== -->
+<footer class="border-t border-gold/15 py-10 sm:py-14">
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6">
+    <div>
+      <div class="serif text-2xl sm:text-3xl tracking-tight">iPhone Wallpapers<span class="text-gold">.</span></div>
+      <p class="mt-1 text-cream/55 text-sm">The largest premium wallpapers brand on Threads.</p>
+    </div>
+    <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-cream/65">
+      <a href="#" class="hover:text-cream">Other packs</a>
+      <a href="#" class="hover:text-cream">Refund policy</a>
+      <a href="https://www.threads.net/@iphonewallpapers" class="hover:text-cream">Threads</a>
+      <a href="#" class="hover:text-cream">Instagram</a>
+      <a href="#" class="hover:text-cream">Xiaohongshu</a>
+      <a href="#" class="hover:text-cream">Contact</a>
+    </nav>
+  </div>
+  <div class="mx-auto max-w-7xl px-5 sm:px-8 mt-8 text-xs text-cream/40">© 2026 iPhone Wallpapers</div>
+</footer>
+
+<!-- ============== LIGHTBOX ============== -->
+<div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Wallpaper preview">
+  <button id="lbClose" aria-label="Close" class="absolute top-5 right-5 w-11 h-11 rounded-full glass flex items-center justify-center text-cream hover:bg-white/10">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+  </button>
+  <button id="lbPrev" aria-label="Previous" class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-12 sm:h-12 rounded-full glass flex items-center justify-center text-cream hover:bg-white/10">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+  </button>
+  <button id="lbNext" aria-label="Next" class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 w-11 h-11 sm:w-12 sm:h-12 rounded-full glass flex items-center justify-center text-cream hover:bg-white/10">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg>
+  </button>
+  <figure class="max-h-full max-w-full flex flex-col items-center gap-3">
+    <img id="lbImg" alt="" class="max-h-[82vh] max-w-full rounded-2xl ring-1 ring-gold/30 shadow-2xl object-contain"/>
+    <figcaption id="lbCap" class="text-cream/70 text-sm tabnum">— / 19</figcaption>
+  </figure>
+</div>
+
+<script>
+  // ============ COUNTDOWN ============
+  // Sale ends May 20, 2026, 11:59 PM local time
+  const SALE_END = new Date('2026-05-20T23:59:00').getTime();
+  const cd1 = document.getElementById('countdown');
+  const cd2 = document.getElementById('countdown2');
+  const bar = document.getElementById('bar');
+
+  function tickCountdown() {
+    const now = Date.now();
+    let diff = Math.max(0, SALE_END - now);
+    if (diff === 0) {
+      const msg = "Sale ended — join the list for next drop";
+      if (cd1) cd1.textContent = msg;
+      if (cd2) cd2.textContent = "00 : 00 : 00 : 00";
+      return;
+    }
+    const d = Math.floor(diff / 86400000); diff -= d * 86400000;
+    const h = Math.floor(diff / 3600000);  diff -= h * 3600000;
+    const m = Math.floor(diff / 60000);    diff -= m * 60000;
+    const s = Math.floor(diff / 1000);
+    const pad = n => String(n).padStart(2,'0');
+    const txt = `${pad(d)}d : ${pad(h)}h : ${pad(m)}m : ${pad(s)}s`;
+    if (cd1) cd1.textContent = txt;
+    if (cd2) cd2.textContent = txt;
+  }
+  tickCountdown();
+  setInterval(tickCountdown, 1000);
+
+  // ============ HERO AUTO-ROTATE ============
+  (function heroRotate() {
+    const stack = document.getElementById('heroStack');
+    if (!stack) return;
+    const slides = Array.from(stack.querySelectorAll('.hero-slide'));
+    const thumbs = Array.from(document.querySelectorAll('.hero-thumb'));
+    const counter = document.getElementById('heroCounter');
+    // map slide index -> wallpaper index for counter (matches the data-slide src order)
+    const map = [4, 9, 11, 14, 17, 6];
+    let idx = 0;
+    let timer = null;
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    function show(i) {
+      idx = (i + slides.length) % slides.length;
+      slides.forEach((s, k) => s.style.opacity = k === idx ? '1' : '0');
+      thumbs.forEach((t, k) => {
+        if (k === idx) { t.classList.add('is-active'); t.style.opacity = '1'; }
+        else { t.classList.remove('is-active'); t.style.opacity = '0.6'; }
+      });
+      if (counter) counter.textContent = String(map[idx]).padStart(2,'0') + ' / 19';
+    }
+    function next() { show(idx + 1); }
+    function start() { if (!reduced) timer = setInterval(next, 3200); }
+    function stop()  { if (timer) clearInterval(timer); timer = null; }
+    thumbs.forEach((t, k) => {
+      t.addEventListener('click', () => { stop(); show(k); start(); });
+    });
+    stack.addEventListener('mouseenter', stop);
+    stack.addEventListener('mouseleave', start);
+    show(0);
+    start();
+  })();
+
+  // ============ COPY CODE ============
+  document.querySelectorAll('.copy-chip[data-copy]').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const code = btn.dataset.copy;
+      try { await navigator.clipboard.writeText(code); }
+      catch(e) {
+        const ta = document.createElement('textarea');
+        ta.value = code; document.body.appendChild(ta); ta.select();
+        try { document.execCommand('copy'); } catch(_) {}
+        ta.remove();
+      }
+      const flag = btn.querySelector('.copied-flag');
+      const icon = btn.querySelector('.copy-icon');
+      if (flag) flag.classList.remove('hidden');
+      if (icon) icon.classList.add('hidden');
+      btn.classList.add('!ring-emerald-400/50');
+      setTimeout(() => {
+        if (flag) flag.classList.add('hidden');
+        if (icon) icon.classList.remove('hidden');
+        btn.classList.remove('!ring-emerald-400/50');
+      }, 1600);
+    });
+  });
+
+  // ============ LIGHTBOX ============
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lbImg');
+  const lbCap = document.getElementById('lbCap');
+  const closeBtn = document.getElementById('lbClose');
+  const prevBtn = document.getElementById('lbPrev');
+  const nextBtn = document.getElementById('lbNext');
+  let currentIndex = 1;
+
+  function pad2(n) { return String(n).padStart(2,'0'); }
+  function openLb(i) {
+    currentIndex = i;
+    lbImg.src = `wallpapers/${pad2(i)}.jpeg`;
+    lbImg.alt = `Orange Liquid Glass wallpaper ${pad2(i)}`;
+    lbCap.textContent = `${pad2(i)} / 19`;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLb() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function step(d) {
+    let i = currentIndex + d;
+    if (i < 1) i = 19;
+    if (i > 19) i = 1;
+    openLb(i);
+  }
+  document.querySelectorAll('#bento [data-i]').forEach(btn => {
+    btn.addEventListener('click', () => openLb(parseInt(btn.dataset.i,10)));
+  });
+  closeBtn.addEventListener('click', closeLb);
+  prevBtn.addEventListener('click', () => step(-1));
+  nextBtn.addEventListener('click', () => step(1));
+  lb.addEventListener('click', e => { if (e.target === lb) closeLb(); });
+  window.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'ArrowLeft') step(-1);
+    if (e.key === 'ArrowRight') step(1);
+  });
+
+  // ============ BEFORE/AFTER SLIDER ============
+  const ba = document.getElementById('ba');
+  if (ba) {
+    let dragging = false;
+    function setPos(clientX) {
+      const r = ba.getBoundingClientRect();
+      const pct = Math.max(0, Math.min(100, ((clientX - r.left) / r.width) * 100));
+      ba.style.setProperty('--pos', pct + '%');
+      const knob = ba.querySelector('.ba-knob');
+      if (knob) knob.setAttribute('aria-valuenow', Math.round(pct));
+    }
+    ba.style.setProperty('--pos', '50%');
+    const start = e => {
+      dragging = true;
+      const x = e.touches ? e.touches[0].clientX : e.clientX;
+      setPos(x);
+    };
+    const move = e => {
+      if (!dragging) return;
+      const x = e.touches ? e.touches[0].clientX : e.clientX;
+      setPos(x);
+    };
+    const end = () => { dragging = false; };
+    ba.addEventListener('mousedown', start);
+    ba.addEventListener('touchstart', start, { passive: true });
+    window.addEventListener('mousemove', move);
+    window.addEventListener('touchmove', move, { passive: true });
+    window.addEventListener('mouseup', end);
+    window.addEventListener('touchend', end);
+    const knob = ba.querySelector('.ba-knob');
+    if (knob) {
+      knob.addEventListener('keydown', e => {
+        const cur = parseFloat(getComputedStyle(ba).getPropertyValue('--pos')) || 50;
+        let n = cur;
+        if (e.key === 'ArrowLeft') n = Math.max(0, cur - 5);
+        if (e.key === 'ArrowRight') n = Math.min(100, cur + 5);
+        if (n !== cur) {
+          ba.style.setProperty('--pos', n + '%');
+          knob.setAttribute('aria-valuenow', Math.round(n));
+          e.preventDefault();
+        }
+      });
+    }
+  }
+</script>
+
+</body>
+</html>
